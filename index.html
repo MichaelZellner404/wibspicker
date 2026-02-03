@@ -7,12 +7,12 @@
 
     <style>
         :root {
-            --bg-main: #0e0e0e;
+            --bg-main: #0b0b0b;
             --bg-card: #1a1a1a;
             --bg-solution: #242424;
             --border: #333;
             --text-main: #ffffff;
-            --text-muted: #bdbdbd;
+            --text-muted: #bcbcbc;
         }
 
         * {
@@ -24,62 +24,60 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
             background-color: var(--bg-main);
             color: var(--text-main);
-            line-height: 1.6;
         }
 
         header {
             background-color: #111;
-            padding: 1.5rem;
-            text-align: center;
+            padding: clamp(1.2rem, 3vw, 2.5rem);
             border-bottom: 2px solid var(--border);
         }
 
         header h1 {
             margin: 0;
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
         }
 
         header p {
             margin-top: 0.5rem;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
             color: var(--text-muted);
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
         }
 
+        /* MAIN LAYOUT */
         main {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            padding: 1.5rem;
-            max-width: 1200px;
-            margin: auto;
+            padding: clamp(1rem, 4vw, 3rem);
         }
 
         section {
             background-color: var(--bg-card);
-            padding: 1.5rem;
+            padding: clamp(1.2rem, 2vw, 2rem);
             border-radius: 8px;
             border: 1px solid var(--border);
         }
 
         section h2 {
             margin-top: 0;
-            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
             border-bottom: 1px solid var(--border);
             padding-bottom: 0.5rem;
         }
 
         section h3 {
             margin-top: 1.2rem;
-            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-            color: #dddddd;
+            font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+            color: #ddd;
         }
 
         p, li {
-            font-size: clamp(1.05rem, 2.8vw, 1.15rem);
+            font-size: clamp(1.05rem, 1.4vw, 1.15rem);
+            line-height: 1.65;
         }
 
         ul {
-            padding-left: 1.2rem;
+            padding-left: 1.3rem;
         }
 
         .lösung {
@@ -92,29 +90,31 @@
 
         footer {
             margin-top: 2rem;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.95rem;
+            padding: 1.5rem;
             color: #888;
             border-top: 1px solid var(--border);
             background-color: #111;
         }
 
-        /* Layout für Tablets & größere Screens */
+        /* TABLET */
         @media (min-width: 768px) {
             main {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            header {
-                padding: 2rem;
+                padding-left: 3vw;
+                padding-right: 3vw;
             }
         }
 
-        /* Layout für große Bildschirme */
-        @media (min-width: 1100px) {
+        /* DESKTOP */
+        @media (min-width: 1200px) {
             main {
                 grid-template-columns: repeat(3, 1fr);
+                padding-left: 2vw;
+                padding-right: 2vw;
+            }
+
+            section {
+                border-radius: 6px;
             }
         }
     </style>
@@ -132,15 +132,15 @@
         <h2>Grundlagen</h2>
         <p>
             Eine Existenzgründung bedeutet, ein eigenes Unternehmen zu starten,
-            um selbstständig zu arbeiten und Geld zu verdienen.
+            um selbstständig zu arbeiten und Einkommen zu erzielen.
         </p>
 
         <h3>Warum gründen?</h3>
         <ul>
             <li>Eigene Entscheidungen treffen</li>
-            <li>Ideen selbst umsetzen</li>
+            <li>Ideen verwirklichen</li>
             <li>Unabhängigkeit</li>
-            <li>Chancen auf höheres Einkommen</li>
+            <li>Persönliche Chancen</li>
         </ul>
     </section>
 
@@ -149,11 +149,11 @@
         <p>Voraussetzungen vor der Existenzgründung:</p>
         <div class="lösung">
             <ul>
-                <li>Geschäftsidee entwickeln</li>
-                <li>Marktanalyse durchführen</li>
-                <li>Businessplan erstellen</li>
-                <li>Finanzierung sichern</li>
-                <li>Rechtliches klären</li>
+                <li>Geschäftsidee</li>
+                <li>Marktanalyse</li>
+                <li>Businessplan</li>
+                <li>Finanzierung</li>
+                <li>Rechtliches</li>
             </ul>
         </div>
     </section>
@@ -166,7 +166,7 @@
                 <li>Finanzielles Risiko</li>
                 <li>Unsichere Einnahmen</li>
                 <li>Hoher Arbeitsaufwand</li>
-                <li>Wenig Absicherung</li>
+                <li>Geringe Absicherung</li>
             </ul>
         </div>
     </section>
@@ -177,9 +177,9 @@
         <div class="lösung">
             <ul>
                 <li>Eigener Chef</li>
-                <li>Flexible Arbeitszeiten</li>
-                <li>Persönliche Freiheit</li>
-                <li>Eigene Ziele verfolgen</li>
+                <li>Flexible Zeiten</li>
+                <li>Freiheit</li>
+                <li>Eigene Ziele</li>
             </ul>
         </div>
     </section>
